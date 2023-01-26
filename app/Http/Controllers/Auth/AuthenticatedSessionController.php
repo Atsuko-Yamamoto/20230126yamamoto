@@ -7,9 +7,21 @@ use App\Http\Requests\Auth\LoginRequest;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Log;
 
 class AuthenticatedSessionController extends Controller
 {
+    public function outputLogFacade() {
+        Log::emergency("emergency ログ!");
+        Log::alert("alert ログ!");
+        Log::critical("critical ログ!");
+        Log::error("error ログ!");
+        Log::warning("warning ログ!");
+        Log::notice("notice ログ!");
+        Log::info("info ログ!");
+        Log::debug("debug ログ!");
+    }
+    
     /**
      * Display the login view.
      *
