@@ -12,13 +12,13 @@ use Illuminate\Support\Facades\Log;
 class AuthenticatedSessionController extends Controller
 {
     public function outputLogFacade() {
-        Log::emergency("emergency ログ!");
+        // Log::emergency("emergency ログ!");
         Log::alert("alert ログ!");
-        Log::critical("critical ログ!");
-        Log::error("error ログ!");
+        // Log::critical("critical ログ!");
+        // Log::error("error ログ!");
         Log::warning("warning ログ!");
         Log::notice("notice ログ!");
-        Log::info("info ログ!");
+        // Log::info("info ログ!");
         Log::debug("debug ログ!");
     }
     
@@ -61,6 +61,6 @@ class AuthenticatedSessionController extends Controller
 
         $request->session()->regenerateToken();
 
-        return redirect('/');
+        return redirect('/login');
     }
 }

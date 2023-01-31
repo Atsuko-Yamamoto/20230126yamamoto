@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\RestController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,9 +14,21 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//勤怠操作画面の表示
+Route::get('/index', [RestController::class, 'index'])->name('rest.index')->middleware('auth');
+
+// ボタン押下
+Route::post('/store', [RestController::class, 'store'])->name('rest.store');
+
+//勤怠管理画面の表示
+Route::get('/date', [RestController::class, 'date'])->name('rest.date')->middleware('auth');
+
+// 打刻
+Route::post('/create', [RestController::class, 'create'])->name('rest.create');
+
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 Route::get('/dashboard', function () {
     return view('dashboard');

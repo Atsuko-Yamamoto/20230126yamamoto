@@ -25,6 +25,10 @@ nav {
     padding-left: 7%;
 }
 
+.list_link {
+    text-decoration: none;
+}
+
 main {
     background-color: #eeeeee;
 }
@@ -47,10 +51,9 @@ main {
     border-radius: 5px;
     padding: 5% 12%;
     margin: 1% 2% 1% 0;
-}
-
-.box p {
     font-weight: bold;
+    border: none;
+    font-size: large;
 }
 
 footer {
