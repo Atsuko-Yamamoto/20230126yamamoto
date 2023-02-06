@@ -8,7 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Attendance extends Model
 {
     use HasFactory;
-       // モデルに関連付けるテーブル
+
+    // モデルに関連付けるテーブル
     protected $table = 'attendances';
     // テーブルに関連付ける主キー
     protected $primaryKey = 'id';
@@ -16,5 +17,9 @@ class Attendance extends Model
 
     public function rests(){
         return $this->hasMany('App\Models\Rest');
+    }
+
+    public function user(){
+        return $this->belongsTo('App\Models\User');
     }
 }

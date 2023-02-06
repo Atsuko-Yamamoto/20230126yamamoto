@@ -17,7 +17,7 @@
     <h1>ログイン</h1>
     </div>
     <div class="form_container">
-    <table>
+    <table class="login_table">
         <form action="{{ route('login') }}" method="post">
             @csrf
         <tr>

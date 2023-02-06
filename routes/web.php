@@ -20,8 +20,10 @@ Route::get('/index', [RestController::class, 'index'])->name('rest.index')->midd
 // ボタン押下
 Route::post('/store', [RestController::class, 'store'])->name('rest.store');
 
+Route::get('/attendance', [RestController::class, 'attendance'])->middleware('auth');
+
 //勤怠管理画面の表示
-Route::get('/date', [RestController::class, 'date'])->name('rest.date')->middleware('auth');
+Route::post('/attendance', [RestController::class, 'attendance'])->name('rest.attendance')->middleware('auth');
 
 // 打刻
 Route::post('/create', [RestController::class, 'create'])->name('rest.create');

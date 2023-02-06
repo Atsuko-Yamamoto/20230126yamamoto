@@ -17,7 +17,7 @@
         <a href="{{ route('rest.index') }}" class="list_link">ホーム</a>
       </li>
       <li class="header_list">
-        <a href="{{ route('rest.date') }}" class="list_link">日付一覧</a>
+        <a href="{{ route('rest.attendance') }}" class="list_link">日付一覧</a>
       </li>
       <li class="header_list">
       <a href="{{ route('logout') }}" class="list_link">ログアウト</a>
